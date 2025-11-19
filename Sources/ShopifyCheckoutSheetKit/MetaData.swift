@@ -23,7 +23,7 @@
 
 import Foundation
 
-package enum MetaData {
+public enum MetaData {
     /// The version of the `ShopifyCheckoutSheetKit` library.
     package static let version = "3.4.0"
     /// The schema version of the CheckoutSheetProtocol.
@@ -33,7 +33,7 @@ package enum MetaData {
     /// making API calls or is the initiator of CSK.
     /// For now this is exclusive to AcceleratedCheckouts to ensure backwards
     /// compatibility.
-    package enum EntryPoint: String {
+    public enum EntryPoint: String {
         case acceleratedCheckouts = "AcceleratedCheckouts"
     }
 

@@ -62,7 +62,7 @@ public func invalidate() {
 @discardableResult
 public func present(checkout url: URL, from: UIViewController, delegate: CheckoutDelegate? = nil) -> CheckoutViewController {
     let viewController = CheckoutViewController(checkout: url, delegate: delegate)
-    from.present(viewController, animated: true)
+    from.navigationController?.pushViewController(viewController, animated: true)
     return viewController
 }
 
@@ -72,6 +72,6 @@ public func present(checkout url: URL, from: UIViewController, delegate: Checkou
 @discardableResult
 package func present(checkout url: URL, from: UIViewController, entryPoint: MetaData.EntryPoint, delegate: CheckoutDelegate? = nil) -> CheckoutViewController {
     let viewController = CheckoutViewController(checkout: url, delegate: delegate, entryPoint: entryPoint)
-    from.present(viewController, animated: true)
+    from.navigationController?.pushViewController(viewController, animated: true)
     return viewController
 }

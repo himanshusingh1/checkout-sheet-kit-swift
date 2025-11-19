@@ -24,7 +24,7 @@
 import UIKit
 import WebKit
 
-class CheckoutWebViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
+public class CheckoutWebViewController: UIViewController, UIAdaptivePresentationControllerDelegate {
     weak var delegate: CheckoutDelegate?
     var checkoutViewDidFailWithErrorCount = 0
     var checkoutView: CheckoutWebView
@@ -152,7 +152,7 @@ class CheckoutWebViewController: UIViewController, UIAdaptivePresentationControl
         }
     }
 
-    func notifyPresented() {
+    public func notifyPresented() {
         checkoutView.checkoutDidPresent = true
     }
 
