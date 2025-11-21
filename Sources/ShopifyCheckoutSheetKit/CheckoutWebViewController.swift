@@ -29,7 +29,7 @@ public class CheckoutWebViewController: UIViewController, UIAdaptivePresentation
     var checkoutViewDidFailWithErrorCount = 0
     var checkoutView: CheckoutWebView
 
-    lazy var progressBar: ProgressBarView = {
+    public lazy var progressBar: ProgressBarView = {
         let progressBar = ProgressBarView(frame: .zero)
         progressBar.translatesAutoresizingMaskIntoConstraints = false
         return progressBar
